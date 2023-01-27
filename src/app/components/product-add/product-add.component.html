@@ -1,0 +1,63 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Add Product</h5></div>
+            <div class="card-body">
+                <form [formGroup]="productAddForm">
+
+                    <div class="mb-3">
+                        <label for="productName">Product Name</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="productName" 
+                            formControlName="productName" 
+                            class="formControl"
+                            placeholder="Product Name"/>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">                
+                        <label for="categoryId">Category Id</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="categoryId" 
+                            formControlName="categoryId" 
+                            class="formControl"
+                            placeholder="Category"/>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">            
+                        <label for="unitsInStock">Units Stock</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="unitsInStock" 
+                            formControlName="unitsInStock" 
+                            class="formControl"
+                            placeholder="Unit Stock"/>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">            
+                        <label for="unitPrice">Unit Price</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="unitPrice" 
+                            formControlName="unitPrice" 
+                            class="formControl"
+                            placeholder="Unit Price"/>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="add()">
+                    Add
+                </button>
+            </div>
+        </div>
+
+    </div>
+    
+</div>

@@ -35,7 +35,16 @@ export class ProductAddComponent {
       console.log(productModel)
       this.productService.add(productModel).subscribe(response=>{
         console.log(response);
-        this.toastrService.success("Product added.", "Success");
+        this.toastrService.success(response.message, "Success");
+      }, responseError=>{
+        if(responseError.error.Errors.length>0){
+          for (let i = 0; i < responseError.error.Errors.length; i++) {
+            const element = responseError.error.Errors[i];
+            this.toastrService.error(responseError.error.Errors[i].ErrorMessage, 
+              "Validation Error");
+          }
+          
+        }
       })
     }else{
       this.toastrService.error("Form is not valid.", "Check again.");

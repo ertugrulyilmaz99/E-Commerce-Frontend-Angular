@@ -3,6 +3,7 @@
 This project is the frontend of a sample e-commerce application.
 - Project is using Angular features as directives, guards, interceptors, pipes, models and services. 
 - Looking is implemented by using Bootstrap library.
+ 
 Use `ng serve` to run the frontend.
 
 # Backend
